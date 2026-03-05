@@ -1,0 +1,16 @@
+# _data/capstone-improvements.yml
+- improvement: "Visual Hierarchy & Clarity"
+  original: "The page title ('Friends of Poway Seniors') is repeated in multiple places (H1, header, meta) and the main content is a long, dense block of text with minimal formatting, making it hard to scan."
+  improved: "A clear, distinct 'before & after' header introduces the comparison. The improvements are broken down into distinct, scannable cards, making the information much easier to digest."
+
+- improvement: "Responsive & Mobile-First Design"
+  original: "The original page is a full, complex HTML document from a live site. While it has a responsive meta tag, its layout is not optimized for a simple, focused comparison on a mobile device."
+  improved: "The infographic uses a modern, flexbox-based layout with a single-column mobile view. The two panels stack vertically on smaller screens, ensuring the comparison is clear and usable on any device."
+
+- improvement: "Content & Layout Focus"
+  original: "The page is cluttered with site navigation, a header, a footer, and multiple scripts, which distracts from the core content about the organization."
+  improved: "The infographic strips away all extraneous navigation and branding. It creates a dedicated, distraction-free zone for the specific task of comparing the original site to the proposed improvements."
+
+- improvement: "Use of Iconography and Imagery"
+  original: "The original page relies on a single header image. It lacks visual cues to help users quickly differentiate between sections (e.g., contact info, about us)."
+  improved: "The improved design uses a clear, large screenshot of the 'before' state. A custom side-by-side diagram (represented by the image placeholder) visually anchors the comparison, and clear icons could be added to each improvement card for better recognition."

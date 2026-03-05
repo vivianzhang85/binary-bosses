@@ -1,0 +1,58 @@
+<!-- _includes/capstone-comparison.html -->
+<div class="capstone-compare">
+
+    <div class="capstone-header">
+        <h2>Reimagining the Web Presence for <span>Friends of Poway Seniors</span></h2>
+        <p>A side-by-side comparison of the original site and our team's proposed user experience and design improvements.</p>
+    </div>
+
+    <div class="capstone-row">
+        <!-- Original Site Column -->
+        <div class="capstone-col capstone-original">
+            <div class="capstone-col-header">
+                <h3>Original Site</h3>
+                <span class="capstone-badge">Before</span>
+            </div>
+            <div class="capstone-image">
+                <img src="/images/capstone/original-site-screenshot.png" alt="Screenshot of the original Friends of Poway Seniors website" onerror="this.style.display='none'">
+                <div class="capstone-image-placeholder">[Original Site Screenshot Placeholder]</div>
+            </div>
+        </div>
+
+        <!-- Improved Version Column -->
+        <div class="capstone-col capstone-improved">
+            <div class="capstone-col-header">
+                <h3>Improved Version</h3>
+                <span class="capstone-badge">After</span>
+            </div>
+            <div class="capstone-image">
+                 <img src="/images/capstone/improved-mockup.png" alt="Mockup of the improved website design" onerror="this.style.display='none'">
+                <div class="capstone-image-placeholder">[Improved Design Mockup Placeholder]</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="capstone-improvements-list">
+        <h3>Key Improvements</h3>
+        {% for item in site.data.capstone-improvements %}
+        <div class="capstone-card">
+            <h4>{{ item.improvement }}</h4>
+            <div class="capstone-card-details">
+                <div class="capstone-card-original">
+                    <span class="capstone-mini-badge">Before</span>
+                    <p>{{ item.original }}</p>
+                </div>
+                <div class="capstone-card-improved">
+                    <span class="capstone-mini-badge">After</span>
+                    <p>{{ item.improved }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="capstone-footer">
+        <p>Capstone Project - Team [Your Team Name]</p>
+    </div>
+
+</div>
