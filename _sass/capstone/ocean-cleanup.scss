@@ -1,0 +1,386 @@
+// Ocean Cleanup Infographic Styles
+// Located in _sass/capstone/
+
+// Variables - Ocean-themed color palette
+$oc-primary: #00b4d8;
+$oc-secondary: #0077b6;
+$oc-accent: #48cae4;
+$oc-deep: #03045e;
+$oc-dark-bg: #0b1a2e;
+$oc-card-bg: #112a3a;
+$oc-text-muted: #9bb8d4;
+$oc-text-light: #e0f2fe;
+$oc-sand: #f9d56e;
+$oc-coral: #ff6b6b;
+
+// Main Container
+.oc-infograph {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+// Header Section
+.oc-header {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #03045e 0%, #0077b6 50%, #00b4d8 100%);
+  border-radius: 24px;
+  margin-bottom: 2rem;
+  border: 1px solid rgba($oc-accent, 0.3);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "🌊";
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    font-size: 150px;
+    opacity: 0.1;
+    transform: rotate(-10deg);
+  }
+}
+
+.oc-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, $oc-sand, $oc-coral);
+  color: $oc-deep;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.oc-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, $oc-sand, $oc-accent, $oc-sand);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: oc-gradient 3s ease infinite;
+  margin: 0 0 1rem 0;
+}
+
+@keyframes oc-gradient {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+.oc-description {
+  color: $oc-text-light;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+// Card Section
+.oc-card {
+  background: linear-gradient(145deg, $oc-card-bg 0%, #1a3f4f 100%);
+  border-radius: 24px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  border: 2px solid rgba($oc-primary, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 40, 80, 0.4);
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, $oc-primary, $oc-accent, $oc-secondary);
+  }
+}
+
+.oc-card-grid {
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Visual Section
+.oc-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba($oc-deep, 0.3);
+  border-radius: 16px;
+  border: 1px solid rgba($oc-primary, 0.2);
+
+  @media (max-width: 1024px) {
+    grid-column: 1 / -1;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+.oc-image-link {
+  position: relative;
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba($oc-primary, 0.3);
+  width: 100%;
+
+  &:hover .oc-image {
+    transform: scale(1.05);
+  }
+
+  &:hover .oc-overlay {
+    opacity: 1;
+  }
+}
+
+.oc-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.oc-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba($oc-primary, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  span {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+}
+
+.oc-status {
+  background: linear-gradient(135deg, $oc-coral, $oc-sand);
+  color: $oc-deep;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.oc-team {
+  text-align: center;
+  margin-top: auto;
+}
+
+.oc-team-label {
+  display: block;
+  color: $oc-text-muted;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.25rem;
+}
+
+.oc-team-name {
+  display: block;
+  color: $oc-accent;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+// Content Section
+.oc-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: rgba($oc-deep, 0.2);
+  border-radius: 16px;
+  border: 1px solid rgba($oc-primary, 0.2);
+}
+
+.oc-project-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: $oc-text-light;
+  margin: 0 0 0.25rem 0;
+}
+
+.oc-subtitle {
+  color: $oc-accent;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 1.25rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba($oc-primary, 0.2);
+}
+
+// Key Points
+.oc-keypoints {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.oc-keypoint {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: $oc-text-light;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.oc-check {
+  color: $oc-accent;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+// Tech Stack
+.oc-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.oc-tech-tag {
+  background: rgba($oc-primary, 0.15);
+  color: $oc-accent;
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba($oc-primary, 0.3);
+}
+
+// Details Section
+.oc-details {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: rgba($oc-deep, 0.2);
+  border-radius: 16px;
+  border: 1px solid rgba($oc-primary, 0.2);
+}
+
+.oc-section-title {
+  color: $oc-text-light;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba($oc-accent, 0.3);
+}
+
+.oc-about {
+  color: $oc-text-muted;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin: 0 0 1.25rem 0;
+}
+
+// Impact List
+.oc-impact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.oc-impact-item {
+  background: rgba($oc-primary, 0.1);
+  color: $oc-text-light;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  border-left: 3px solid $oc-accent;
+  position: relative;
+  padding-left: 2rem;
+
+  &::before {
+    content: "🌊";
+    position: absolute;
+    left: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+// Button
+.oc-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, $oc-primary, $oc-secondary);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: auto;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba($oc-primary, 0.4);
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(135deg, $oc-secondary, $oc-primary);
+  }
+}
+
+// Ocean-themed decorative elements
+.oc-card:hover {
+  .oc-visual {
+    border-color: rgba($oc-accent, 0.4);
+  }
+}
+
+// Wave animation for header
+@keyframes oc-wave {
+  0% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(-10px) translateY(-5px); }
+  100% { transform: translateX(0) translateY(0); }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .oc-title {
+    font-size: 2rem;
+  }
+  
+  .oc-header {
+    padding: 2rem 1rem;
+  }
+  
+  .oc-card {
+    padding: 1.5rem;
+  }
+}
