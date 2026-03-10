@@ -138,5 +138,15 @@ Below are the capstone infographic pages created by student groups. Click an ima
    </div>
     
 
-
+ <!-- Community Food Connection -->
+   <div class="flex items-start space-x-4 p-4 border rounded-lg">
+       <a href="https://vivianzhang85.github.io/binary-bosses/capstone/foodconnection/">
+           <img src="/images/capstone/food-connection.png" alt="AutoTriage - Triage project" class="w-28 h-28 object-cover rounded" />
+       </a>
+       <div>
+           <h3 class="text-lg font-semibold"><a href="https://vivianzhang85.github.io/binary-bosses/capstone/foodconnection/">Pirna</a></h3>
+           <p class="text-sm text-gray-700">Help facilate easy access to food and resources for people who need it.</p>
+           <p class="text-xs text-gray-500 mt-2">Team: Nikhil, Rohan, Adi</p>
+       </div>
+   </div>
 
